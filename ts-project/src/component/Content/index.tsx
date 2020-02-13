@@ -1,16 +1,15 @@
 import React from 'react';
 import google from './google.png'
-import CounterWithProps from './counterWithProps'
+import CounterWithProps from './Input'
 import style from './style.module.css'
 
 
 
 const Content:React.FC = () => {
-    const counter = 0
     return  <div className = {style.SearchInput}>
                 <img src = {google} alt = 'logo'></img>
                 <div>
-                    <CounterWithProps counter={counter}/>
+                    <CounterWithProps/>
                 </div>
                 <button className = {style.Button}>Поиск в Google</button>
                 <button className = {style.Button}>Мне повезёт!</button>

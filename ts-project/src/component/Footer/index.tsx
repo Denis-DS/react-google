@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '/Users/denis/Downloads/React/ts-project/src/component/Button/';
+import Button from '/Users/denis/Downloads/rrreact/ts-project/src/component/Button';
 import AppButton from './appButton/';
 import style from './style.module.css';
 
