@@ -1,9 +1,0 @@
-.Button {
-    text-decoration: none;
-    color: #5f6368;
-    margin: 10px;
-}
-
-.Button:hover {
-    border-bottom: 1px solid #5f6368;
-}
