@@ -1,0 +1,6 @@
+.ButtonDiv {
+  display: flex;
+  position: relative;
+  margin-left: 80vw;
+  margin-top: 10px;
+}
