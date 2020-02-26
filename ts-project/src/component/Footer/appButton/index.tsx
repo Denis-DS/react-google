@@ -6,29 +6,35 @@ const arr = [
   {
     href: 'https://www.google.com/preferences?hl=ru-UA&fg=1',
     name: 'Настройки поиска',
+    id: 'settings',
   },
   {
     href: 'https://www.google.com/advanced_search?hl=ru-UA&fg=1',
     name: 'Расширенный поиск',
+    id: 'search',
   },
   {
     href:
       'https://myactivity.google.com/privacyadvisor/search?utm_source=googlemenu&fg=1',
     name: 'Ваши данные в Поиске',
+    id: 'dataSearch',
   },
   {
     href:
       'https://myactivity.google.com/item?utm_source=google&hl=ru-UA&fg=1&restrict=search',
     name: 'История',
+    id: 'history',
   },
   {
     href:
       'https://support.google.com/websearch/?visit_id=637171929083270473-1328549747&hl=ru-UA&rd=2#topic=3378866',
     name: 'Справка по поиску',
+    id: 'reference',
   },
   {
     href: 'https://www.google.com/',
     name: 'Отправить отзыв',
+    id: 'review',
   },
 ]
 
@@ -95,7 +101,7 @@ export default class AppButton extends React.PureComponent<{}, State> {
         {isOpened && (
           <div className={style.Menu} ref={this.myRef}>
             {arr.map(i => (
-              <Button href={i.href} name={i.name} />
+              <Button href={i.href} key={i.id} name={i.name} />
             ))}
           </div>
         )}
