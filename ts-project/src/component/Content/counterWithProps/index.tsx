@@ -11,7 +11,6 @@ interface State {
 }
 
 const myRe = /^[A-Za-zА-Яа-яЁё\s]+$/
-// myRe.exec("cdbbdbsb zjbjnjn")[0]
 
 class CounterWithProps extends React.Component<OwnProps, State> {
   state = {
@@ -27,13 +26,12 @@ class CounterWithProps extends React.Component<OwnProps, State> {
           <input
             className={style.Search}
             type="text"
-            pattern="^[A-Za-zА-Яа-яЁё\s]+$"
             value={this.state.valueOfInput}
-            onChange={e => {
-              if (myRe.exec(' ' + e.target.value)) {
-                this.setState({ valueOfInput: e.target.value })
-              }
-            }}
+            onChange={e =>
+              myRe.exec(' ' + e.target.value)
+                ? this.setState({ valueOfInput: e.target.value })
+                : null
+            }
           />
           <div className={style.BttnDiv}>
             <button className={style.Buttons}>
